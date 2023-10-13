@@ -10,34 +10,33 @@ h1 {
 
 .container {
   background-color: rgb(223, 199, 154);
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  height: 300px;
+  height: 200px;
   border: 5px solid rgb(193, 120, 25);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: no-wrap;
-  justify-content: center;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
+
 }
 
 .container div {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   font-size: 4em;
-  flex-basis: 200px;
+
 }
 
-div:nth-of-type(1) {
-  flex-grow: 1;
-  flex-shrink: 3;
-}
 
-div:nth-of-type(5) {
-  flex-grow: 2;
-  flex-shrink: 0;
-}
-/*-------------*/
+div:nth-of-type(4) {
+  font-size: 5em;
+  align-self: center;
+  flex-grow:1;
+  flex-basis: 300px;
+
+}  
+
 
 main{
   width:80%;
@@ -51,17 +50,22 @@ main{
 
 main .sidebar{
   background-color: aqua;
-  flex: 1 2 200px;
+  height: 100%;
+ 
+  flex: 1 100px;
+
+
 }
 
 main .mainContent{
   background-color: chocolate;
-  flex:3 1 300px;
-}
+  height: 100%;
+  flex-grow: 5;
+  flex-basis: 500px;
+  flex-shrink: 3;
+  flex: 5
 
-/* div:nth-of-type(5) {
-  align-self: ;
-} */
+}
 
 /* Flex-Basis em diu el tamany inicial que hauria de tenir aquella caixa */
 /* Flex-Grow controla la quantitat d'espai que ocuparà la caixa si hi ha disponible */
